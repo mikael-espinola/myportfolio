@@ -22,6 +22,14 @@ export const CarouselContent = styled.ul`
   li {
     padding: 0.5em;
     a {
+      @media screen and (min-width: 900px) {
+        transform: scale(1);
+        transition: transform 1.5s;
+        &:hover {
+          transform: scale(1.2);
+          transition: transform 0.2s;
+        }
+      }
       display: flex;
       flex-direction: column;
       align-items: center;
