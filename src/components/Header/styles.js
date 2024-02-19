@@ -8,6 +8,7 @@ export const Container = styled.div`
   left: 0;
   background-color: rgba(0, 0, 0, 0.904);
   z-index: 4;
+  backdrop-filter: blur(2.5px);
 `;
 
 export const Title = styled.h1`
