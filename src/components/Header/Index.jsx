@@ -6,19 +6,41 @@ import MenuMobile from "../MenuMobile/Index";
 
 function Header() {
   const [menuIsVisible, setMenuIsVisible] = useState(false);
+  const [borderColor, setBorderColor] = useState("orange");
+  const [selectHome, setSelectHome] = useState(false);
+  const [selectProjects, setSelectProjects] = useState(false);
+  const [selectContacts, setSelectContacts] = useState(false);
 
   const scrollToTag = (e) => {
     const title = e.target.title;
     const getTag = document.querySelector(`#${title}`);
 
-    switch (title) {
-      case "Home":
-        return getTag.scrollIntoView({ behavior: "smooth" });
-      case "Projects":
-        return getTag.scrollIntoView({ behavior: "smooth" });
-      case "Contacts":
-        return getTag.scrollIntoView({ behavior: "smooth" });
-    }
+    const scrollToElement = () => {
+      getTag.scrollIntoView({ behavior: "smooth" });
+    };
+
+    const setTitleStates = {
+      Home: () => {
+        scrollToElement();
+        setSelectHome(true);
+        setSelectProjects(false);
+        setSelectContacts(false);
+      },
+      Projects: () => {
+        scrollToElement();
+        setSelectProjects(true);
+        setSelectHome(false);
+        setSelectContacts(false);
+      },
+      Contacts: () => {
+        scrollToElement();
+        setSelectContacts(true);
+        setSelectProjects(false);
+        setSelectHome(false);
+      },
+    };
+
+    setTitleStates[title]();
   };
 
   return (
@@ -30,17 +52,35 @@ function Header() {
         />
         <s.Title>Mikael Espínola</s.Title>
         <s.MenuOptions>
-          <li>
+          <li
+            style={
+              selectHome
+                ? { borderBottom: `1.8px solid ${borderColor}` }
+                : { borderBottom: "none" }
+            }
+          >
             <a title="Home" onClick={(e) => scrollToTag(e)}>
               Home
             </a>
           </li>
-          <li>
+          <li
+            style={
+              selectProjects
+                ? { borderBottom: `1.8px solid ${borderColor}` }
+                : { borderBottom: "none" }
+            }
+          >
             <a title="Projects" onClick={(e) => scrollToTag(e)}>
               Projects
             </a>
           </li>
-          <li>
+          <li
+            style={
+              selectContacts
+                ? { borderBottom: `1.8px solid ${borderColor}` }
+                : { borderBottom: "none" }
+            }
+          >
             <a title="Contacts" onClick={(e) => scrollToTag(e)}>
               Contact me
             </a>

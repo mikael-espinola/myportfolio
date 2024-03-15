@@ -11,22 +11,10 @@ import { SiStyledcomponents } from "react-icons/si";
 
 import * as s from "./styles";
 
-function Techs({ children }) {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const nextSlide = () => {
-    setCurrentSlide((prev) => (prev === children.length - 1 ? 0 : prev + 1));
-  };
-
-  const prevSlide = () => {
-    setCurrentSlide((prev) => (prev == 0 ? children.length - 1 : prev - 1));
-  };
-
+function Techs() {
   return (
     <s.Container>
-      <s.CarouselContent
-        style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-      >
+      <s.CarouselContent>
         <li>
           <a title="JavaScript">
             <IoLogoJavascript color="#cd8b08" />

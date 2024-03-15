@@ -1,23 +1,23 @@
 const Data = [
   {
+    id: 765111842,
+    name: "gitHunt",
+    html_url: "https://github.com/mikael-espinola/githunt-app/",
+    techs: ["React", "Styled-Components"],
+    homepage: "https://mikael-espinola.github.io/githunt-app/",
+    image: "assets/images/dataImages/githunt_layout.png",
+    description:
+      "This application was useful to understand concepts about useState, consume an API with RESTFul principles, building it with Mobile First and applying dark mode logic. Styled-Components are being used to improve the power of CSS and promote greater JavaScript interaction in code.",
+  },
+  {
     id: 704230846,
-    name: "Moovie App",
+    name: "Moovie",
     html_url: "https://github.com/mikael-espinola/moovie-app/",
     techs: ["React", "CSS"],
     homepage: "https://mikael-espinola.github.io/moovie-app/",
     image: "assets/images/dataImages/moovie-react-img.png",
     description:
-      "Moovie has a purpose to help users find movies by providing features such as viewing trailers, accessing reviews, and other pertinent information. With this tool, movie enthusiasts can conveniently explore and discover films.",
-  },
-  {
-    id: 704230845,
-    name: "Moovie",
-    html_url: "https://github.com/mikael-espinola/Moovie",
-    techs: ["JavaScript", "CSS", "HTML"],
-    homepage: "https://mikael-espinola.github.io/Moovie/",
-    image: "assets/images/dataImages/Moovie_layout.png",
-    description:
-      "Moovie has a purpose to help users find movies by providing features such as viewing trailers, accessing reviews, and other pertinent information. With this tool, movie enthusiasts can conveniently explore and discover films.",
+      "In this project, I improved my knowledge in RESTFul API, DOM manipulation, applying logic through JavaScript in React, and styling using Sass. Moovie aims to help users find movies by providing features such as trailer viewing, rating, and other relevant information.",
   },
   {
     id: 664028384,
@@ -27,7 +27,7 @@ const Data = [
     homepage: "https://mikael-espinola.github.io/the_task/",
     image: "assets/images/dataImages/the_task_layout.png",
     description:
-      "The Task is an app designed to help users register and manage tasks. It includes a login system and CRUD functionality to manipulate tasks.",
+      "The application was built to enhance my skills in implementing CRUD with Vanilla JavaScript, also furthering my practice in front-end technologies with HTML and CSS. The Task aims to help users record and manage daily tasks.",
   },
   {
     id: 624198695,
@@ -37,7 +37,7 @@ const Data = [
     homepage: "https://mikael-espinola.github.io/quizz_app/",
     image: "assets/images/dataImages/quizz_layout.png",
     description:
-      "Quizz-app is an application in which is built a similar Kahoot Game with fundamentals in JavaScript, HTML e CSS. ",
+      "This application was built based on Vanilla JavaScript and includes implementations such as a login center, data persistence in local storage, requests to a RESTful API, and final scoring. Quizz-app is an application similar to the famous KAHOOT!",
   },
   {
     id: 607954116,
