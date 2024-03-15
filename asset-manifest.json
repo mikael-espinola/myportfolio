@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.js": "/myportfolio/static/js/main.27c1cda1.js",
+    "main.js": "/myportfolio/static/js/main.eba4c90d.js",
     "static/media/moovie-react-img.png": "/myportfolio/static/media/moovie-react-img.87161c16f4fc72f94f4f.png",
     "static/media/Profile.png": "/myportfolio/static/media/Profile.f677ba2d857947f275e7.png",
     "static/media/mario_layout.png": "/myportfolio/static/media/mario_layout.37c3d40c3fd333fe6c9f.png",
     "static/media/Moovie_layout.png": "/myportfolio/static/media/Moovie_layout.13d7eb4675a2ee456863.png",
     "static/media/the_task_layout.png": "/myportfolio/static/media/the_task_layout.54dac798974469bd6ecd.png",
+    "static/media/githunt_layout.png": "/myportfolio/static/media/githunt_layout.190826908b4d564bb04e.png",
     "static/media/quizz_layout.png": "/myportfolio/static/media/quizz_layout.b81c12f162d53e36dbda.png",
     "static/media/clima_app_layout.png": "/myportfolio/static/media/clima_app_layout.882a20e32673be8c5f62.png",
     "static/media/flappybird_layout.png": "/myportfolio/static/media/flappybird_layout.241fd861b0c2e29e7ce3.png",
     "index.html": "/myportfolio/index.html",
-    "main.27c1cda1.js.map": "/myportfolio/static/js/main.27c1cda1.js.map"
+    "main.eba4c90d.js.map": "/myportfolio/static/js/main.eba4c90d.js.map"
   },
   "entrypoints": [
-    "static/js/main.27c1cda1.js"
+    "static/js/main.eba4c90d.js"
   ]
 }
