@@ -17,7 +17,7 @@ export const Title = styled.h2`
 `;
 export const ProjectsList = styled.ul`
   width: 60%;
-  @media screen and (max-width: 950px) {
+  @media screen and (max-width: 750px) {
     width: 100%;
   }
 `;
@@ -37,15 +37,19 @@ export const ProjectItem = styled.li`
     flex-direction: column;
     align-items: center;
     margin: 1em 0;
+    @media screen and (max-width: 600px) {
+      width: 100%;
+    }
     > img {
       border-radius: 0.9em;
       width: 600px;
       height: 280px;
       object-fit: cover;
-      @media screen and (max-width: 950px) {
+      @media screen and (max-width: 700px) {
         width: 240px;
         height: 200px;
         border-radius: 0.9em;
+        width: 100%;
       }
     }
     > p {

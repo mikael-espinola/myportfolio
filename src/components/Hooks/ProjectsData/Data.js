@@ -7,7 +7,7 @@ const Data = [
     homepage: "https://mikael-espinola.github.io/githunt-app/",
     image: "assets/images/dataImages/githunt_layout.png",
     description:
-      "This application was useful to understand concepts about useState, consume an API with RESTFul principles, building it with Mobile First and applying dark mode logic. Styled-Components are being used to improve the power of CSS and promote greater JavaScript interaction in code.",
+      "This application was useful for understanding concepts about useState, consuming an API with RESTFul principles, building it with the Mobile First technique, implementing Debounce to improve the customer's search experience and applying dark mode logic for greater user comfort. Styled-Components are being used to improve the power of CSS and promote greater JavaScript interaction in code.",
   },
   {
     id: 704230846,
