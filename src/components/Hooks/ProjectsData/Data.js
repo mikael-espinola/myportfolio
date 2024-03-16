@@ -3,7 +3,7 @@ const Data = [
     id: 765111842,
     name: "gitHunt",
     html_url: "https://github.com/mikael-espinola/githunt-app/",
-    techs: ["React", "Styled-Components"],
+    techs: ["ReactJS", "Styled-Components"],
     homepage: "https://mikael-espinola.github.io/githunt-app/",
     image: "assets/images/dataImages/githunt_layout.png",
     description:
@@ -13,7 +13,7 @@ const Data = [
     id: 704230846,
     name: "Moovie",
     html_url: "https://github.com/mikael-espinola/moovie-app/",
-    techs: ["React", "CSS"],
+    techs: ["ReactJS", "CSS"],
     homepage: "https://mikael-espinola.github.io/moovie-app/",
     image: "assets/images/dataImages/moovie-react-img.png",
     description:

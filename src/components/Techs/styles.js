@@ -8,14 +8,15 @@ export const Container = styled.div`
 `;
 
 export const CarouselContent = styled.ul`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   width: 80%;
   justify-content: space-evenly;
   padding: 1.5em;
 
   @media screen and (max-width: 700px) {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 0.2em;
   }
 
