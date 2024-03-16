@@ -7,6 +7,7 @@ import { FaWhatsapp } from "react-icons/fa";
 import * as s from "./styles";
 
 import * as ss from "../Main/styles";
+import Rights from "./Rights/Rights";
 
 function Footer() {
   return (
@@ -35,6 +36,7 @@ function Footer() {
           </a>
         </ss.ContactItem>
       </s.ContactsList>
+      <Rights />
     </s.Section>
   );
 }
