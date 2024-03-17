@@ -47,13 +47,14 @@ function Main() {
           <br />
           <br />
           I'm Mikael Espínola, a dedicated Front-End developer who's all about
-          learning and growing. My goal? becoming an outstanding Software
-          Engineer.
+          learning and growing.
+          <br />
+          My goal? becoming an outstanding Fullstack Software Engineer.
           <br />
           <br />
           Throughout my journey, I've worked on personal and study projects,
-          diving into different programming technologies. These experience have
-          improving my tech skills but alsomy ability to work with others and
+          diving into different programming technologies. These experience has
+          improved my tech skills but also my ability to work with others and
           think analytically.
           <br />
           <br />

@@ -1,5 +1,4 @@
 import React from "react";
-import { FaRegCopyright } from "react-icons/fa6";
 import { Container, Text } from "./style";
 
 function Rights() {
