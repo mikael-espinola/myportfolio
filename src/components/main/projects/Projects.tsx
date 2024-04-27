@@ -15,11 +15,14 @@ import {
   Button,
   ProjectContainer,
   SpaceP,
+  LinkContainer,
 } from "./style";
 import Data from "../../Hooks/data/Data";
 import DefaultImg from "../../assets/images/Profile.png";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { getProjectsRef } from "../../redux/headerSlice";
+import { currentLang } from "../../redux/langSlice";
+import { RiShareBoxLine } from "react-icons/ri";
 
 interface ItemData {
   name: string;
@@ -38,6 +41,7 @@ interface Props {
 function Projects() {
   const [isLink, setIsLink] = useState<boolean>();
   const projectsRef = useRef(null);
+  const lang = useSelector(currentLang);
 
   const dispatch = useDispatch();
 
@@ -50,7 +54,7 @@ function Projects() {
       <SpaceP ref={projectsRef}></SpaceP>
       <Container>
         <TitleContainer>
-          <Title>Projects</Title>
+          <Title>{lang === "EN" ? "Projects" : "Projetos"}</Title>
         </TitleContainer>
         <List>
           {Data &&
@@ -66,31 +70,28 @@ function Projects() {
                       alt="logo"
                     ></Image>
                   </ImageContainer>
-                  <Title>{item.name.toUpperCase()}</Title>
+                  <Title>
+                    {item.name.toUpperCase()}
+                    <LinkContainer>
+                      <Button href={item.html_url} target="_blank">
+                        <RiShareBoxLine />
+                      </Button>
+                    </LinkContainer>
+                  </Title>
                   <DescriptionContainer>
-                    <Description>{item.description}</Description>
+                    <Description>
+                      {lang === "EN"
+                        ? item.description_EN
+                        : item.description_PT}
+                    </Description>
                   </DescriptionContainer>
                 </ProjectContainer>
-                <ButtonContainer>
-                  <Button
-                    link={item.html_url === "" ? "false" : "true"}
-                    href={item.html_url}
-                    target="_blank"
-                  >
-                    Repo
-                  </Button>
-                  <Button
-                    link={item.homepage === "" ? "false" : "true"}
-                    href={item.homepage}
-                    target="_blank"
-                  >
-                    Live
-                  </Button>
-                </ButtonContainer>
                 <TechsContainer>
                   <Techs color="1">Techs: </Techs>
-                  {item.techs.map((tech) => (
-                    <Techs color="">{tech}</Techs>
+                  {item.techs.map((tech, index) => (
+                    <Techs key={index} color="">
+                      {tech}
+                    </Techs>
                   ))}
                 </TechsContainer>
               </Item>

@@ -20,7 +20,7 @@ export const ListPlus = styled.ul`
   gap: 3em;
   padding: 0.5em;
 
-  margin-top: 3em;
+  margin-top: 2em;
 
   @media screen and (min-width: 700px) {
     padding: 0 2.5em;

@@ -42,7 +42,7 @@ export const Item = styled.li`
 export const ProjectContainer = styled.div`
   overflow: auto;
   @media screen and (min-width: 750px) {
-    height: 30em;
+    height: 32em;
   }
 `;
 
@@ -51,7 +51,7 @@ export const ImageContainer = styled.div`
   height: 12em;
 
   @media screen and (min-width: 700px) {
-    height: 18em;
+    height: 15em;
   }
 `;
 export const Image = styled.img`
@@ -64,13 +64,20 @@ export const Title = styled.h2`
   padding: 0.5em 0;
 `;
 
+export const LinkContainer = styled.div`
+  display: inline;
+  font-size: 15px;
+  margin-left: 1em;
+`;
+
 export const DescriptionContainer = styled.div`
   margin-bottom: 1em;
   width: 100%;
 `;
 export const Description = styled.span`
+  font-size: 1.1em;
   @media screen and (min-width: 700px) {
-    font-size: 13px;
+    font-size: 0.7em;
   }
 `;
 
@@ -79,16 +86,9 @@ export const ButtonContainer = styled.div`
   display: flex;
   justify-content: space-evenly;
 `;
-export const Button = styled.a<{ link: string }>`
-  background-color: #ebf1f7;
-  opacity: ${(props) => (props.link === "true" ? 1 : 0.5)};
-  color: #444;
-  text-align: center;
-  cursor: ${(props) => (props.link === "true" ? "pointer" : "default")};
-  padding: 0.5em;
-  width: 6em;
-  border-radius: 6px;
-  border: none;
+export const Button = styled.a`
+  color: #fff;
+  cursor: pointer;
   text-decoration: none;
 `;
 

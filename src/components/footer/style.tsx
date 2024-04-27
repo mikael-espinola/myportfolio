@@ -5,10 +5,15 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 14em 0;
+  margin: 18em 0;
+
+  @media screen and (min-width: 700px) {
+    margin: 14em 0;
+  }
 `;
 export const SpaceF = styled.div`
   height: 0.1em;
+  margin: 5em 0;
 `;
 export const Text1 = styled.h1`
   font-size: 22px;

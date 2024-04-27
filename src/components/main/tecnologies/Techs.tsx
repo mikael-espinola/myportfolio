@@ -53,17 +53,29 @@ function Techs() {
           <Span>Redux</Span>
         </Item>
         <Item>
-          <SiStyledcomponents color="#c513e8" />
-          <Span>Styled-Components</Span>
+          <FaPython color="yellow" />
+          <Span>Python</Span>
         </Item>
         <Item>
-          <FaSass color="#f80bb5" />
-          <Span>SASS</Span>
+          <FaGit color="#f6690a" />
+          <Span>GIT</Span>
         </Item>
       </List>
       {showList ? (
         <>
           <ListPlus>
+            <Item>
+              <FaNodeJs color="#527016" />
+              <Span>Node JS</Span>
+            </Item>
+            <Item>
+              <SiStyledcomponents color="#c513e8" />
+              <Span>Styled-Components</Span>
+            </Item>
+            <Item>
+              <FaSass color="#f80bb5" />
+              <Span>SASS</Span>
+            </Item>
             <Item>
               <FaHtml5 color="#f6690a" title="HTML" />
               <Span>HTML</Span>
@@ -73,24 +85,12 @@ function Techs() {
               <Span>CSS</Span>
             </Item>
             <Item>
-              <FaGit color="#f6690a" />
-              <Span>GIT</Span>
-            </Item>
-            <Item>
-              <FaPython color="yellow" />
-              <Span>Python</Span>
-            </Item>
-            <Item>
               <SiMysql color="#ffcd57" />
               <Span>MySQL</Span>
             </Item>
             <Item>
               <DiMongodb color="green" />
               <Span>MongoDB</Span>
-            </Item>
-            <Item>
-              <FaNodeJs color="#527016" />
-              <Span>Node JS</Span>
             </Item>
           </ListPlus>
           <ContainerButton>

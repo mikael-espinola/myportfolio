@@ -1,1 +1,1 @@
-Acess Portfolio website [here](https://mikael-espinola.github.io/myportfolio)
+Check out Portfolio website [here](https://mikael-espinola.github.io/myportfolio)

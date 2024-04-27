@@ -24,6 +24,7 @@ export const ProfileImg = styled.img`
 
 export const LanguageButton = styled.button`
   position: absolute;
+  top: 0;
   right: 20px;
   padding: 0.5em;
   border-radius: 20px;
