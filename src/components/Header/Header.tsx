@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Container, Item, List, Nav, Title } from "./style";
 import { useSelector } from "react-redux";
 import { currentRef } from "../redux/headerSlice";
@@ -16,7 +16,7 @@ function Header() {
         (window.scrollY /
           (document.documentElement.scrollHeight - window.innerHeight)) *
         100;
-      valueY > 3 ? setShowTitle(false) : setShowTitle(true);
+      valueY > 1 ? setShowTitle(false) : setShowTitle(true);
       if (valueY < 18) {
         setClickOn(1);
       } else if (valueY > 19 && valueY < 85) {

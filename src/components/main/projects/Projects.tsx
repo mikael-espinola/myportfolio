@@ -11,7 +11,6 @@ import {
   Title,
   TitleContainer,
   DescriptionContainer,
-  ButtonContainer,
   Button,
   ProjectContainer,
   SpaceP,
@@ -34,12 +33,7 @@ interface ItemData {
   id: number;
 }
 
-interface Props {
-  Data: ItemData[];
-}
-
 function Projects() {
-  const [isLink, setIsLink] = useState<boolean>();
   const projectsRef = useRef(null);
   const lang = useSelector(currentLang);
 

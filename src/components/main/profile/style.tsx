@@ -16,10 +16,15 @@ export const ProfileContainer = styled.div`
   align-items: center;
 `;
 export const ProfileImg = styled.img`
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 300px;
   border-radius: 150px;
   margin: 1em 0;
+
+  @media screen and (min-width: 700px) {
+    width: 280px;
+    height: 280px;
+  }
 `;
 
 export const LanguageButton = styled.button`

@@ -75,7 +75,7 @@ export const DescriptionContainer = styled.div`
   width: 100%;
 `;
 export const Description = styled.span`
-  font-size: 1.1em;
+  font-size: 0.95em;
   @media screen and (min-width: 700px) {
     font-size: 0.7em;
   }
