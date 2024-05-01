@@ -12,16 +12,16 @@ const Data = [
     image: "assets/images/dataImages/todo_layout.png",
   },
   {
-    id: 784424986,
-    name: "counter",
-    html_url: "https://github.com/mikael-espinola/counter",
-    homepage: "https://mikael-espinola.github.io/counter/",
-    description_EN:
-      "Developed a number Counter using the Redux lib to manage the counter's state and share the value state in other parts of the project.",
+    id: 612029466,
+    name: "Weather",
+    html_url: "https://github.com/mikael-espinola/weather",
     description_PT:
-      "Desenvolvi um Contador de números usando a biblioteca Redux para gerenciar o estado do contador e compartilhar o valor do estado em outras partes do projeto.",
-    techs: ["TypeScript", "Styled-Components", "Redux"],
-    image: "assets/images/dataImages/counter_layout.png",
+      "Weather foi desenvolvido para aumentar a habilidade na integração de React, Typescript e Bootstrap. Sua função é de apresentar para o usuário informações organizadas sobre o cliente na cidade digitada",
+    techs: ["React", "TypeScript", "Bootstrap"],
+    homepage: "https://mikael-espinola.github.io/clima_App/",
+    image: "assets/images/dataImages/weather_app_layout.png",
+    description_EN:
+      "Weather was developed to increase proficiency in React, Typescript, and Bootstrap integration. Its function is to present organized information to the user about the weather in the entered city.",
   },
   {
     id: 773071238,
@@ -48,16 +48,16 @@ const Data = [
       "This app was useful for understanding concepts about useState, consuming an API with RESTFul principles, building it with the Mobile First technique, implementing Debounce to improve the customer's search experience and applying dark mode logic for greater user comfort.",
   },
   {
-    id: 664028384,
-    name: "the_task",
-    html_url: "https://github.com/mikael-espinola/the_task",
-    description_PT:
-      "A aplicação foi construída para aprimorar minhas habilidades na implementação do CRUD com JavaScript puro, também aprofundando minha prática em tecnologias front-end com HTML e CSS. A tarefa tem como objetivo ajudar os usuários a registrar e gerenciar tarefas diárias.",
-    techs: ["JavaScript", "CSS", "HTML"],
-    homepage: "https://mikael-espinola.github.io/the_task/",
-    image: "assets/images/dataImages/the_task_layout.png",
+    id: 784424986,
+    name: "counter",
+    html_url: "https://github.com/mikael-espinola/counter",
+    homepage: "https://mikael-espinola.github.io/counter/",
     description_EN:
-      "The application was built to enhance my skills in implementing CRUD with Vanilla JavaScript, also furthering my practice in front-end technologies with HTML and CSS. The Task aims to help users record and manage daily tasks.",
+      "Developed a number Counter using the Redux lib to manage the counter's state and share the value state in other parts of the project.",
+    description_PT:
+      "Desenvolvi um Contador de números usando a biblioteca Redux para gerenciar o estado do contador e compartilhar o valor do estado em outras partes do projeto.",
+    techs: ["TypeScript", "Styled-Components", "Redux"],
+    image: "assets/images/dataImages/counter_layout.png",
   },
   {
     id: 607954116,
@@ -71,18 +71,7 @@ const Data = [
     description_EN:
       "Flappy Bird Game built through the integration of JavaScript, HTML and CSS resulting in DOM manipulation. ",
   },
-  {
-    id: 612029466,
-    name: "clima_App",
-    html_url: "https://github.com/mikael-espinola/clima_App",
-    description_PT:
-      "Desenvolvi uma aplicação para manipulação do DOM e consumo de API com o objetivo de criar um aplicativo de previsão do tempo.",
-    techs: ["JavaScript", "CSS", "HTML"],
-    homepage: "https://mikael-espinola.github.io/clima_App/",
-    image: "assets/images/dataImages/clima_app_layout.png",
-    description_EN:
-      "I developed an application for DOM manipulation and API consumption with the aim of creating a weather forecast application.",
-  },
+
   {
     id: 591188654,
     name: "Projeto_Mario",

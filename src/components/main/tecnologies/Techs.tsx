@@ -15,6 +15,7 @@ import { SiStyledcomponents } from "react-icons/si";
 import { SiRedux } from "react-icons/si";
 import { IoIosArrowUp } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
+import { FaBootstrap } from "react-icons/fa";
 
 import {
   Container,
@@ -68,6 +69,11 @@ function Techs() {
               <FaNodeJs color="#527016" />
               <Span>Node JS</Span>
             </Item>
+            <Item>
+              <FaBootstrap color="#5025a0" />
+              <Span>Bootstrap</Span>
+            </Item>
+
             <Item>
               <SiStyledcomponents color="#c513e8" />
               <Span>Styled-Components</Span>

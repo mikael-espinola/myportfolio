@@ -17,6 +17,8 @@ function Footer() {
   const contactsRef = useRef(null);
   const dispatch = useDispatch();
   const lang = useSelector(currentLang);
+  const date = new Date();
+  const year = date.getFullYear();
 
   useEffect(() => {
     dispatch(getFooterRef(contactsRef));
@@ -29,7 +31,7 @@ function Footer() {
         <Text1>
           {lang === "EN"
             ? "Thank you for your visit."
-            : "Obrigado pela visita."}{" "}
+            : "Obrigado pela visita."}
         </Text1>
         <Text2>
           {lang === "EN"
@@ -41,10 +43,10 @@ function Footer() {
         </ContactsContainer>
         <CreditsContainer>
           <Rights>
-            © 2024 Mikael Espínola.{" "}
+            © {year} Mikael Espínola.
             {lang === "EN"
               ? "All rights reserved."
-              : "Todos os direitos reservados"}{" "}
+              : "Todos os direitos reservados"}
           </Rights>
         </CreditsContainer>
       </Container>
