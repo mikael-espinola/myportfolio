@@ -50,10 +50,10 @@ const Data = [
   {
     id: 796012684,
     name: "BMI Calculator",
-    html_url: "https://github.com/mikael-espinola/githunt-app/",
+    html_url: "https://github.com/mikael-espinola/bmi-calculator",
     description_PT:
       "Esta é uma solução para o Índice de Massa Corporal desenvolvida com a mentoria do canal One Bit Code YT, que me ajudou a melhorar minhas habilidades de codificação em React Native.",
-    techs: ["ReactJS", "Styled-Components"],
+    techs: ["React Native", "Bootstrap"],
     homepage: "https://mikael-espinola.github.io/githunt-app/",
     image: "assets/images/dataImages/bmi_layout.jpg",
     description_EN:

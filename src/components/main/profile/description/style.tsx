@@ -14,6 +14,4 @@ export const Description = styled.div`
   }
 `;
 
-export const Space = styled.div`
-  margin: 0.5em 0;
-`;
+export const Paragraph = styled.p``;
