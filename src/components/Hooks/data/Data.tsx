@@ -48,6 +48,18 @@ const Data = [
       "This app was useful for understanding concepts about useState, consuming an API with RESTFul principles, building it with the Mobile First technique, implementing Debounce to improve the customer's search experience and applying dark mode logic for greater user comfort.",
   },
   {
+    id: 796012684,
+    name: "BMI Calculator",
+    html_url: "https://github.com/mikael-espinola/githunt-app/",
+    description_PT:
+      "Esta é uma solução para o Índice de Massa Corporal desenvolvida com a mentoria do canal One Bit Code YT, que me ajudou a melhorar minhas habilidades de codificação em React Native.",
+    techs: ["ReactJS", "Styled-Components"],
+    homepage: "https://mikael-espinola.github.io/githunt-app/",
+    image: "assets/images/dataImages/bmi_layout.jpg",
+    description_EN:
+      "This is a solution to the Body Mass Index developed with One Bit Code YT channel mentorship, which help me improve my coding skills in React Native.",
+  },
+  {
     id: 784424986,
     name: "counter",
     html_url: "https://github.com/mikael-espinola/counter",

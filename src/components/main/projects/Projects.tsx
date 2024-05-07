@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import {
   Container,
   Description,
@@ -22,16 +22,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { getProjectsRef } from "../../redux/headerSlice";
 import { currentLang } from "../../redux/langSlice";
 import { RiShareBoxLine } from "react-icons/ri";
-
-interface ItemData {
-  name: string;
-  description: string;
-  image: string;
-  techs: string[];
-  html_url: string;
-  homepage: string;
-  id: number;
-}
 
 function Projects() {
   const projectsRef = useRef(null);

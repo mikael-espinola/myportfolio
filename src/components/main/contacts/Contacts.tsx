@@ -35,7 +35,7 @@ function Contacts() {
         <Item>
           <Link
             target="_blank"
-            href="https://drive.google.com/file/d/1ByR9ZroiuasAMdE_jVrj5T8QhSGox1hx/view?usp=sharing"
+            href="https://drive.google.com/file/d/1PvINJ3d2KnvGCsueh61q0uyvFqsGaAj8/view?usp=sharing"
           >
             {<IoDocument color="gray" title="Résumé" />}
           </Link>

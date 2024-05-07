@@ -29,9 +29,7 @@ function Footer() {
       <SpaceF ref={contactsRef}></SpaceF>
       <Container>
         <Text1>
-          {lang === "EN"
-            ? "Thank you for your visit."
-            : "Obrigado pela visita."}
+          {lang === "EN" ? "Thank you for visiting." : "Obrigado pela visita."}
         </Text1>
         <Text2>
           {lang === "EN"
