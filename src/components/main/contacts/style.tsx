@@ -4,7 +4,7 @@ export const NavBar = styled.nav`
   width: 100%;
   background-color: #3f729455;
   border-radius: 5px;
-  padding: 1em 0;
+  padding: 0.9em 0;
 `;
 export const List = styled.ul`
   display: flex;
@@ -13,12 +13,12 @@ export const List = styled.ul`
 `;
 export const Item = styled.li`
   cursor: pointer;
-  font-size: 25px;
 `;
 
 export const Link = styled.a`
   text-decoration: none;
   display: flex;
+  font-size: 25px;
 
   @media screen and (min-width: 950px) {
     transform: scale(1);
