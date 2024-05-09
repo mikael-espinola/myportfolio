@@ -43,8 +43,8 @@ function Footer() {
           <Rights>
             © {year} Mikael Espínola.
             {lang === "EN"
-              ? "All rights reserved."
-              : "Todos os direitos reservados"}
+              ? " All rights reserved."
+              : " Todos os direitos reservados."}
           </Rights>
         </CreditsContainer>
       </Container>
