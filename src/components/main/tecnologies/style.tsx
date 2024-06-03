@@ -14,19 +14,21 @@ export const List = styled.ul`
     padding: 2.5em;
   }
 `;
+
 export const ListPlus = styled.ul`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3em;
   padding: 0.5em;
-
   margin-top: 2em;
+  transition: display 0.5s ease-out;
 
   @media screen and (min-width: 700px) {
     padding: 0 2.5em;
     grid-template-columns: repeat(6, 1fr);
   }
 `;
+
 export const Item = styled.li`
   display: flex;
   flex-direction: column;

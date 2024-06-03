@@ -7,7 +7,7 @@ import { FaCss3Alt } from "react-icons/fa";
 import { FaSass } from "react-icons/fa";
 import { FaGit } from "react-icons/fa";
 import { SiTypescript } from "react-icons/si";
-import { FaPython } from "react-icons/fa";
+import { TbBrandNextjs } from "react-icons/tb";
 import { SiMysql } from "react-icons/si";
 import { DiMongodb } from "react-icons/di";
 import { FaNodeJs } from "react-icons/fa";
@@ -16,6 +16,7 @@ import { SiRedux } from "react-icons/si";
 import { IoIosArrowUp } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaBootstrap } from "react-icons/fa";
+import { RiTailwindCssFill } from "react-icons/ri";
 
 import {
   Container,
@@ -50,12 +51,12 @@ function Techs() {
           <Span>React</Span>
         </Item>
         <Item>
-          <SiRedux color="#7906bb" />
-          <Span>Redux</Span>
+          <TbBrandNextjs color="black" />
+          <Span>Next JS</Span>
         </Item>
         <Item>
-          <FaPython color="yellow" />
-          <Span>Python</Span>
+          <SiRedux color="#7906bb" />
+          <Span>Redux</Span>
         </Item>
         <Item>
           <FaGit color="#f6690a" />
@@ -70,13 +71,16 @@ function Techs() {
               <Span>Node JS</Span>
             </Item>
             <Item>
+              <SiStyledcomponents color="#c513e8" />
+              <Span>Styled-Components</Span>
+            </Item>
+            <Item>
               <FaBootstrap color="#5025a0" />
               <Span>Bootstrap</Span>
             </Item>
-
             <Item>
-              <SiStyledcomponents color="#c513e8" />
-              <Span>Styled-Components</Span>
+              <RiTailwindCssFill color="#0856a3" />
+              <Span>Tailwind</Span>
             </Item>
             <Item>
               <FaSass color="#f80bb5" />
