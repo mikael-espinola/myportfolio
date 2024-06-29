@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface Props {
+  $image_url: string;
+}
+
 export const Container = styled.div`
   width: 100%;
   margin: 3em 0 1em 0;
@@ -9,65 +13,86 @@ export const SpaceP = styled.div`
   height: 0.1em;
 `;
 
-export const List = styled.ul`
-  display: grid;
-  grid-template-columns: 1;
-  gap: 0.5em;
-  @media screen and (min-width: 750px) and (max-width: 949px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @media screen and (min-width: 950px) and (max-width: 1250px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  @media screen and (min-width: 1251px) and (max-width: 1450px) {
-    grid-template-columns: repeat(4, 1fr);
-  }
-  @media screen and (min-width: 1451px) {
-    grid-template-columns: repeat(5, 1fr);
-  }
-`;
-
 export const TitleContainer = styled.div`
   display: flex;
   justify-content: center;
 `;
 
-export const Item = styled.li`
-  background-color: #04335986;
-  padding: 1em;
+export const List = styled.ul`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2em;
+  justify-content: center;
+`;
+
+export const Card = styled.li`
   position: relative;
-  border-radius: 6px;
-`;
+  width: 20em;
+  height: 15em;
 
-export const ProjectContainer = styled.div`
-  overflow: auto;
-  @media screen and (min-width: 750px) {
-    height: 32em;
+  &:hover .flip {
+    transform: rotateY(180deg);
   }
 `;
 
-export const ImageContainer = styled.div`
-  width: 100%;
-  height: 12em;
-
-  @media screen and (min-width: 700px) {
-    height: 15em;
-  }
-`;
-export const Image = styled.img`
+export const Flip = styled.div`
+  position: absolute;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  border-radius: 9px;
+  transform-style: preserve-3d;
+  transition: 0.5s;
 `;
+
+export const BaseCard = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 0px 0px 10px #0000003a;
+  backface-visibility: hidden;
+`;
+export const FaceCard = styled(BaseCard)<Props>`
+  background-image: url(${(props) => require(`../../${props.$image_url}`)});
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+`;
+
+export const CardTitleContainer = styled.div`
+  background-color: #1817176f;
+  width: 100%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+`;
+
+export const CardTitle = styled.h4`
+  color: #fff;
+  text-align: center;
+  text-transform: capitalize;
+  font-weight: bold;
+`;
+
+export const BackCard = styled(BaseCard)`
+  background-color: #393838;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  padding: 0.6em;
+  overflow: auto;
+`;
+
 export const Title = styled.h2`
   padding: 0.5em 0;
 `;
 
 export const LinkContainer = styled.div`
-  display: inline;
+  display: flex;
+  gap: 1em;
+  justify-content: center;
   font-size: 15px;
-  margin-left: 1em;
+  padding: 0.4em 0;
+  border: 1px black solid;
 `;
 
 export const DescriptionContainer = styled.div`
@@ -87,24 +112,37 @@ export const ButtonContainer = styled.div`
   justify-content: space-evenly;
 `;
 export const Button = styled.a`
+  padding: 0 1em;
+  border-radius: 8px;
   color: #fff;
   cursor: pointer;
   text-decoration: none;
+  transition: background-color 0.3s ease-in;
+
+  &:hover {
+    background-color: #000;
+  }
 `;
 
 export const TechsContainer = styled.div`
   display: flex;
+  flex-wrap: wrap;
   width: 100%;
   justify-content: space-evenly;
-  bottom: 4px;
-  left: 0;
+  align-items: center;
+
+  padding: 0.7em 0;
 `;
 
-export const Techs = styled.span<{ color: string }>`
-  background-color: ${(props) => (props.color === "" ? "#3f729455" : "none")};
-  padding: 0.2em;
+export const TechTitle = styled.span`
+  font-size: 14px;
+`;
+
+export const Techs = styled.span`
+  background-color: #25242453;
+  padding: 0.1em 0.6em;
+  margin: 0.2em 0;
   border-radius: 8px;
   cursor: default;
-  color: ${(props) => (props.color !== "" ? "#1e83d6" : "#fff")};
-  font-size: 12px;
+  font-size: 10px;
 `;
