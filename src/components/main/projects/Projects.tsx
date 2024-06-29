@@ -2,9 +2,7 @@ import React, { useEffect, useRef } from "react";
 import {
   Container,
   Description,
-  Image,
-  ImageContainer,
-  Item,
+  Card,
   List,
   Techs,
   TechsContainer,
@@ -12,16 +10,19 @@ import {
   TitleContainer,
   DescriptionContainer,
   Button,
-  ProjectContainer,
   SpaceP,
   LinkContainer,
+  Flip,
+  FaceCard,
+  BackCard,
+  CardTitleContainer,
+  CardTitle,
+  TechTitle,
 } from "./style";
 import Data from "../../Hooks/data/Data";
-import DefaultImg from "../../assets/images/Profile.png";
 import { useDispatch, useSelector } from "react-redux";
 import { getProjectsRef } from "../../redux/headerSlice";
 import { currentLang } from "../../redux/langSlice";
-import { RiShareBoxLine } from "react-icons/ri";
 
 function Projects() {
   const projectsRef = useRef(null);
@@ -42,43 +43,49 @@ function Projects() {
         </TitleContainer>
         <List>
           {Data &&
-            Data.map((item, index) => (
-              <Item key={index}>
-                <ProjectContainer>
-                  <ImageContainer>
-                    <Image
-                      src={
-                        (item.image && require(`../../${item.image}`)) ||
-                        DefaultImg
-                      }
-                      alt="logo"
-                    ></Image>
-                  </ImageContainer>
-                  <Title>
-                    {item.name.toUpperCase()}
+            Data.map((item) => (
+              <Card key={item.id}>
+                <Flip className="flip">
+                  <FaceCard $image_url={`${item.image}`}>
+                    <CardTitleContainer>
+                      <CardTitle>{item.name}</CardTitle>
+                    </CardTitleContainer>
+                  </FaceCard>
+                  <BackCard>
+                    <DescriptionContainer>
+                      <Description>
+                        {lang === "EN"
+                          ? item.description_EN
+                          : item.description_PT}
+                      </Description>
+                    </DescriptionContainer>
                     <LinkContainer>
-                      <Button href={item.html_url} target="_blank">
-                        <RiShareBoxLine />
+                      <Button
+                        href={item.homepage}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Deploy
+                      </Button>
+                      <Button
+                        href={item.html_url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        Github
                       </Button>
                     </LinkContainer>
-                  </Title>
-                  <DescriptionContainer>
-                    <Description>
-                      {lang === "EN"
-                        ? item.description_EN
-                        : item.description_PT}
-                    </Description>
-                  </DescriptionContainer>
-                </ProjectContainer>
-                <TechsContainer>
-                  <Techs color="1">Techs: </Techs>
-                  {item.techs.map((tech, index) => (
-                    <Techs key={index} color="">
-                      {tech}
-                    </Techs>
-                  ))}
-                </TechsContainer>
-              </Item>
+                    <TechsContainer>
+                      <TechTitle>Techs: </TechTitle>
+                      {item.techs.map((tech, index) => (
+                        <Techs key={index} color="">
+                          {tech}
+                        </Techs>
+                      ))}
+                    </TechsContainer>
+                  </BackCard>
+                </Flip>
+              </Card>
             ))}
         </List>
       </Container>
