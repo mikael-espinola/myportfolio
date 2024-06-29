@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 interface refData {
   refs: {
     homeRef: any;
-    ProjectsRef: any;
+    projectsRef: any;
     footerRef: any;
   };
 }
@@ -11,7 +11,7 @@ interface refData {
 const initialState: refData = {
   refs: {
     homeRef: null,
-    ProjectsRef: null,
+    projectsRef: null,
     footerRef: null,
   },
 };
@@ -24,7 +24,7 @@ const headerButtonSlice = createSlice({
       state.refs.homeRef = action.payload;
     },
     getProjectsRef(state, action) {
-      state.refs.ProjectsRef = action.payload;
+      state.refs.projectsRef = action.payload;
     },
     getFooterRef(state, action) {
       state.refs.footerRef = action.payload;

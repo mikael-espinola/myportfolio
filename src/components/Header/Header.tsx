@@ -8,22 +8,26 @@ function Header() {
   const isRef = useSelector(currentRef);
   const lang = useSelector(currentLang);
 
-  const handleHomeRef = (key: number) => {
-    isRef.homeRef.current.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
+  const handleNavigation = (key: string) => {
+    switch (key) {
+      case "home":
+        isRef.homeRef.current.scrollIntoView({
+          behavior: "smooth",
+        });
+        break;
 
-  const handleProjectsRef = (key: number) => {
-    isRef.ProjectsRef.current.scrollIntoView({
-      behavior: "smooth",
-    });
-  };
+      case "projects":
+        isRef.projectsRef.current.scrollIntoView({
+          behavior: "smooth",
+        });
+        break;
 
-  const handleFooterRef = (key: number) => {
-    isRef.footerRef.current.scrollIntoView({
-      behavior: "smooth",
-    });
+      case "contacts":
+        isRef.footerRef.current.scrollIntoView({
+          behavior: "smooth",
+        });
+        break;
+    }
   };
 
   return (
@@ -40,13 +44,19 @@ function Header() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#Home" onClick={() => handleHomeRef(1)}>
+              <Nav.Link href="#home" onClick={() => handleNavigation("home")}>
                 {lang === "EN" ? "Home" : "Início"}
               </Nav.Link>
-              <Nav.Link href="#Projects" onClick={() => handleProjectsRef(2)}>
+              <Nav.Link
+                href="#projects"
+                onClick={() => handleNavigation("projects")}
+              >
                 {lang === "EN" ? "Projects" : "Projetos"}
               </Nav.Link>
-              <Nav.Link href="#Contacts" onClick={() => handleFooterRef(3)}>
+              <Nav.Link
+                href="#contacts"
+                onClick={() => handleNavigation("contacts")}
+              >
                 {lang === "EN" ? "Contacts" : "Contatos"}
               </Nav.Link>
             </Nav>
