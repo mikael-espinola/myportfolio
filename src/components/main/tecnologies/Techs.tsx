@@ -21,7 +21,7 @@ import { SiPrisma } from "react-icons/si";
 
 import {
   Container,
-  Button,
+  ArrowButton,
   Item,
   List,
   Span,
@@ -64,7 +64,7 @@ function Techs() {
           <Span>Git</Span>
         </Item>
       </List>
-      <ListPlus showList={showList}>
+      <ListPlus $show_list={showList}>
         <Item>
           <SiStyledcomponents color="#c513e8" />
           <Span>Styled-Components</Span>
@@ -107,9 +107,17 @@ function Techs() {
         </Item>
       </ListPlus>
       <ContainerButton>
-        <Button onClick={handleButton}>
-          {showList ? <IoIosArrowUp /> : <IoIosArrowDown />}
-        </Button>
+        <ArrowButton onClick={handleButton}>
+          {showList ? (
+            <span>
+              <IoIosArrowUp />
+            </span>
+          ) : (
+            <span>
+              <IoIosArrowDown />
+            </span>
+          )}
+        </ArrowButton>
       </ContainerButton>
     </Container>
   );

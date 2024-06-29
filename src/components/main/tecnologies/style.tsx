@@ -1,7 +1,7 @@
 import styled, { keyframes } from "styled-components";
 
 type Props = {
-  showList: boolean;
+  $show_list: boolean;
 };
 
 export const Container = styled.div`
@@ -45,7 +45,11 @@ export const ListPlus = styled.ul<Props>`
   grid-template-columns: repeat(3, 1fr);
   gap: 3em;
   margin: 2em 0 1em 0;
-  animation: ${(props) => (props.showList ? slideDown : slideUp)} 0.5s forwards;
+  animation: ${(props) => (props.$show_list ? slideDown : slideUp)} 0.5s
+    forwards;
+
+  visibility: ${(props) => (props.$show_list ? "visible" : "hidden")};
+  pointer-events: ${(props) => (props.$show_list ? "auto" : "none")};
 
   @media screen and (min-width: 700px) {
     padding: 1em 2.5em;
@@ -81,8 +85,9 @@ export const ContainerButton = styled.div`
   justify-content: center;
 `;
 
-export const Button = styled.button`
+export const ArrowButton = styled.button`
   padding: 0.2em;
-  min-width: 5em;
+  width: 15em;
   border-radius: 10px;
+  cursor: pointer;
 `;
