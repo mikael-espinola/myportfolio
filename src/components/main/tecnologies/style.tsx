@@ -1,4 +1,8 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+type Props = {
+  showList: boolean;
+};
 
 export const Container = styled.div`
   position: relative;
@@ -7,7 +11,6 @@ export const List = styled.ul`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3em;
-  padding: 0.5em;
 
   @media screen and (min-width: 700px) {
     grid-template-columns: repeat(6, 1fr);
@@ -15,17 +18,39 @@ export const List = styled.ul`
   }
 `;
 
-export const ListPlus = styled.ul`
+const slideDown = keyframes`
+  from {
+    max-height: 0;
+    opacity: 0;
+  }
+  to {
+    max-height: 700px; 
+    opacity: 1;
+  }
+`;
+
+const slideUp = keyframes`
+  from {
+    max-height: 700px; 
+    opacity: 1;
+  }
+  to {
+    max-height: 0;
+    opacity: 0;
+  }
+`;
+
+export const ListPlus = styled.ul<Props>`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 3em;
-  padding: 0.5em;
-  margin-top: 2em;
-  transition: display 0.5s ease-out;
+  margin: 2em 0 1em 0;
+  animation: ${(props) => (props.showList ? slideDown : slideUp)} 0.5s forwards;
 
   @media screen and (min-width: 700px) {
-    padding: 0 2.5em;
+    padding: 1em 2.5em;
     grid-template-columns: repeat(6, 1fr);
+    margin-top: 0;
   }
 `;
 
@@ -54,8 +79,6 @@ export const ContainerButton = styled.div`
   display: flex;
   width: 100%;
   justify-content: center;
-  align-items: center;
-  padding: 1em;
 `;
 
 export const Button = styled.button`

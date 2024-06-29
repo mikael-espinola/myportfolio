@@ -17,6 +17,7 @@ import { IoIosArrowUp } from "react-icons/io";
 import { IoIosArrowDown } from "react-icons/io";
 import { FaBootstrap } from "react-icons/fa";
 import { RiTailwindCssFill } from "react-icons/ri";
+import { SiPrisma } from "react-icons/si";
 
 import {
   Container,
@@ -51,7 +52,7 @@ function Techs() {
           <Span>React</Span>
         </Item>
         <Item>
-          <TbBrandNextjs color="black" />
+          <TbBrandNextjs color="#413f3f" />
           <Span>Next JS</Span>
         </Item>
         <Item>
@@ -60,62 +61,56 @@ function Techs() {
         </Item>
         <Item>
           <FaGit color="#f6690a" />
-          <Span>GIT</Span>
+          <Span>Git</Span>
         </Item>
       </List>
-      {showList ? (
-        <>
-          <ListPlus>
-            <Item>
-              <FaNodeJs color="#527016" />
-              <Span>Node JS</Span>
-            </Item>
-            <Item>
-              <SiStyledcomponents color="#c513e8" />
-              <Span>Styled-Components</Span>
-            </Item>
-            <Item>
-              <FaBootstrap color="#5025a0" />
-              <Span>Bootstrap</Span>
-            </Item>
-            <Item>
-              <RiTailwindCssFill color="#0856a3" />
-              <Span>Tailwind</Span>
-            </Item>
-            <Item>
-              <FaSass color="#f80bb5" />
-              <Span>SASS</Span>
-            </Item>
-            <Item>
-              <FaHtml5 color="#f6690a" title="HTML" />
-              <Span>HTML</Span>
-            </Item>
-            <Item>
-              <FaCss3Alt color="blue" />
-              <Span>CSS</Span>
-            </Item>
-            <Item>
-              <SiMysql color="#ffcd57" />
-              <Span>MySQL</Span>
-            </Item>
-            <Item>
-              <DiMongodb color="green" />
-              <Span>MongoDB</Span>
-            </Item>
-          </ListPlus>
-          <ContainerButton>
-            <Button onClick={handleButton}>
-              <IoIosArrowUp />
-            </Button>
-          </ContainerButton>
-        </>
-      ) : (
-        <ContainerButton>
-          <Button onClick={handleButton}>
-            <IoIosArrowDown />
-          </Button>
-        </ContainerButton>
-      )}
+      <ListPlus showList={showList}>
+        <Item>
+          <SiStyledcomponents color="#c513e8" />
+          <Span>Styled-Components</Span>
+        </Item>
+        <Item>
+          <FaBootstrap color="#5025a0" />
+          <Span>Bootstrap</Span>
+        </Item>
+        <Item>
+          <RiTailwindCssFill color="#0856a3" />
+          <Span>Tailwind</Span>
+        </Item>
+        <Item>
+          <FaSass color="#f80bb5" />
+          <Span>SASS</Span>
+        </Item>
+        <Item>
+          <FaHtml5 color="#f6690a" title="HTML" />
+          <Span>HTML</Span>
+        </Item>
+        <Item>
+          <FaCss3Alt color="blue" />
+          <Span>CSS</Span>
+        </Item>
+        <Item>
+          <FaNodeJs color="#527016" />
+          <Span>Node JS</Span>
+        </Item>
+        <Item>
+          <SiPrisma color="#000000" />
+          <Span>Prisma</Span>
+        </Item>
+        <Item>
+          <SiMysql color="#ffcd57" />
+          <Span>MySQL</Span>
+        </Item>
+        <Item>
+          <DiMongodb color="green" />
+          <Span>MongoDB</Span>
+        </Item>
+      </ListPlus>
+      <ContainerButton>
+        <Button onClick={handleButton}>
+          {showList ? <IoIosArrowUp /> : <IoIosArrowDown />}
+        </Button>
+      </ContainerButton>
     </Container>
   );
 }
