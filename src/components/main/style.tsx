@@ -1,9 +1,6 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  padding-top: 5em;
   width: 100%;
-  margin-top: 8em;
-`;
-export const Space = styled.div`
-  height: 0.1em;
 `;

@@ -1,32 +1,19 @@
 import { useSelector } from "react-redux";
-import { currentRef } from "../redux/headerSlice";
 import { currentLang } from "../redux/langSlice";
 import "bootstrap/dist/css/bootstrap.css";
 import { Navbar, Container, Nav } from "react-bootstrap";
+import { refs } from "../redux/refs";
+import { MutableRefObject } from "react";
 
 function Header() {
-  const isRef = useSelector(currentRef);
   const lang = useSelector(currentLang);
 
   const handleNavigation = (key: string) => {
-    switch (key) {
-      case "home":
-        isRef.homeRef.current.scrollIntoView({
-          behavior: "smooth",
-        });
-        break;
-
-      case "projects":
-        isRef.projectsRef.current.scrollIntoView({
-          behavior: "smooth",
-        });
-        break;
-
-      case "contacts":
-        isRef.footerRef.current.scrollIntoView({
-          behavior: "smooth",
-        });
-        break;
+    const ref = refs[key] as MutableRefObject<HTMLElement | null> | null;
+    console.log(ref);
+    console.log(refs);
+    if (ref && ref.current) {
+      ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   };
 
@@ -44,18 +31,21 @@ function Header() {
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="#home" onClick={() => handleNavigation("home")}>
+              <Nav.Link
+                href="#home"
+                onClick={() => handleNavigation("homeRef")}
+              >
                 {lang === "EN" ? "Home" : "Início"}
               </Nav.Link>
               <Nav.Link
                 href="#projects"
-                onClick={() => handleNavigation("projects")}
+                onClick={() => handleNavigation("projectRef")}
               >
                 {lang === "EN" ? "Projects" : "Projetos"}
               </Nav.Link>
               <Nav.Link
                 href="#contacts"
-                onClick={() => handleNavigation("contacts")}
+                onClick={() => handleNavigation("contactRef")}
               >
                 {lang === "EN" ? "Contacts" : "Contatos"}
               </Nav.Link>

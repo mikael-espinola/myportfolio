@@ -5,29 +5,26 @@ import {
   Container,
   CreditsContainer,
   Rights,
-  SpaceF,
   Text1,
   Text2,
 } from "./style";
-import { useDispatch, useSelector } from "react-redux";
-import { getFooterRef } from "../redux/headerSlice";
+import { useSelector } from "react-redux";
 import { currentLang } from "../redux/langSlice";
+import { refs } from "../redux/refs";
 
 function Footer() {
   const contactsRef = useRef(null);
-  const dispatch = useDispatch();
   const lang = useSelector(currentLang);
   const date = new Date();
   const year = date.getFullYear();
 
   useEffect(() => {
-    dispatch(getFooterRef(contactsRef));
+    refs.contactRef = contactsRef;
   }, []);
 
   return (
     <>
-      <SpaceF ref={contactsRef}></SpaceF>
-      <Container>
+      <Container ref={contactsRef}>
         <Text1>
           {lang === "EN" ? "Thank you for visiting." : "Obrigado pela visita."}
         </Text1>

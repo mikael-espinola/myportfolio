@@ -10,7 +10,6 @@ import {
   TitleContainer,
   DescriptionContainer,
   Button,
-  SpaceP,
   LinkContainer,
   Flip,
   FaceCard,
@@ -20,24 +19,21 @@ import {
   TechTitle,
 } from "./style";
 import Data from "../../Hooks/data/Data";
-import { useDispatch, useSelector } from "react-redux";
-import { getProjectsRef } from "../../redux/headerSlice";
+import { useSelector } from "react-redux";
 import { currentLang } from "../../redux/langSlice";
+import { refs } from "../../redux/refs";
 
 function Projects() {
   const projectsRef = useRef(null);
   const lang = useSelector(currentLang);
 
-  const dispatch = useDispatch();
-
   useEffect(() => {
-    dispatch(getProjectsRef(projectsRef));
+    refs.projectRef = projectsRef;
   }, []);
 
   return (
     <>
-      <SpaceP ref={projectsRef}></SpaceP>
-      <Container>
+      <Container ref={projectsRef}>
         <TitleContainer>
           <Title>{lang === "EN" ? "Projects" : "Projetos"}</Title>
         </TitleContainer>

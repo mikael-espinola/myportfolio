@@ -1,23 +1,20 @@
 import React, { useEffect, useRef } from "react";
-import { Container, Space } from "./style";
+import { Container } from "./style";
 import Profile from "./profile/Profile";
 import Techs from "./tecnologies/Techs";
 import Projects from "./projects/Projects";
-import { useDispatch } from "react-redux";
-import { getHomeRef } from "../redux/headerSlice";
+import { refs } from "../redux/refs";
 
 function Main() {
   const homeRef = useRef(null);
-  const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getHomeRef(homeRef));
+    refs.homeRef = homeRef;
   }, []);
 
   return (
     <>
-      <Space ref={homeRef}></Space>
-      <Container>
+      <Container ref={homeRef}>
         <Profile />
         <Techs />
         <Projects />

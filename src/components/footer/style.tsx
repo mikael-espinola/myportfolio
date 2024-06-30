@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+  padding-top: 5em;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -11,10 +12,7 @@ export const Container = styled.div`
     margin: 14em 0;
   }
 `;
-export const SpaceF = styled.div`
-  height: 0.1em;
-  margin: 5em 0;
-`;
+
 export const Text1 = styled.h1`
   font-size: 22px;
   margin: 1em 0;

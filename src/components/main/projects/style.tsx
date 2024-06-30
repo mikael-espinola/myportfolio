@@ -5,12 +5,9 @@ interface Props {
 }
 
 export const Container = styled.div`
+  padding-top: 3em;
   width: 100%;
   margin: 3em 0 1em 0;
-`;
-
-export const SpaceP = styled.div`
-  height: 0.1em;
 `;
 
 export const TitleContainer = styled.div`
