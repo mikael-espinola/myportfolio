@@ -64,6 +64,7 @@ export const CardTitleContainer = styled.div`
   width: 100%;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  backdrop-filter: blur(2px);
 `;
 
 export const CardTitle = styled.h4`

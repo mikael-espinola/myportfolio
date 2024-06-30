@@ -1,29 +1,5 @@
 const Data = [
   {
-    id: 784991749,
-    name: "To-Do List",
-    html_url: "https://github.com/mikael-espinola/todo-list",
-    homepage: "https://mikael-espinola.github.io/todo-list/",
-    description_EN:
-      "A short todo list built to increase my Redux skills with state management.",
-    description_PT:
-      "Uma lista de afazeres curta construída para aumentar minhas habilidades com Redux no gerenciamento de estado",
-    techs: ["TypeScript", "Styled-Components", "Redux"],
-    image: "assets/images/dataImages/todo_layout.png",
-  },
-  {
-    id: 612029466,
-    name: "Weather",
-    html_url: "https://github.com/mikael-espinola/weather",
-    description_PT:
-      "Weather foi desenvolvido para aumentar a habilidade na integração de React, Typescript e Bootstrap. Sua função é de apresentar para o usuário informações organizadas sobre o cliente na cidade digitada",
-    techs: ["React", "TypeScript", "Bootstrap"],
-    homepage: "https://mikael-espinola.github.io/clima_App/",
-    image: "assets/images/dataImages/weather_app_layout.png",
-    description_EN:
-      "Weather was developed to increase proficiency in React, Typescript, and Bootstrap integration. Its function is to present organized information to the user about the weather in the entered city.",
-  },
-  {
     id: 773071238,
     name: "moovie",
     html_url: "https://github.com/mikael-espinola/moovie-v1",
@@ -32,7 +8,7 @@ const Data = [
       "Built with Typescript and React, Its main purpose is to help users find movies by providing features such as viewing trailers, accessing reviews, and other pertinent information. With this tool, movie enthusiasts can conveniently explore and discover films.",
     description_PT:
       "Construído com Typescript e React, seu principal objetivo é ajudar os usuários a encontrar filmes, fornecendo recursos como visualização de trailers, acesso a críticas e outras informações pertinentes. Com essa ferramenta, os entusiastas de filmes podem explorar e descobrir filmes de forma conveniente.",
-    techs: ["TypeScript", "Styled-Components"],
+    techs: ["React", "TypeScript", "Styled-Components"],
     image: "assets/images/dataImages/Moovie_layout.png",
   },
   {
@@ -41,11 +17,23 @@ const Data = [
     html_url: "https://github.com/mikael-espinola/githunt-app/",
     description_PT:
       "Este aplicativo foi útil para entender conceitos sobre useState, consumir uma API com princípios RESTful, construí-lo com a técnica Mobile First, implementar Debounce para melhorar a experiência de busca do cliente e aplicar lógica de modo escuro para maior conforto do usuário.",
-    techs: ["ReactJS", "Styled-Components"],
+    techs: ["React", "Styled-Components"],
     homepage: "https://mikael-espinola.github.io/githunt-app/",
     image: "assets/images/dataImages/githunt_layout.png",
     description_EN:
       "This app was useful for understanding concepts about useState, consuming an API with RESTFul principles, building it with the Mobile First technique, implementing Debounce to improve the customer's search experience and applying dark mode logic for greater user comfort.",
+  },
+  {
+    id: 612029466,
+    name: "weather",
+    html_url: "https://github.com/mikael-espinola/weather",
+    description_PT:
+      "Weather foi desenvolvido para aumentar a habilidade na integração de React, Typescript e Bootstrap. Sua função é de apresentar para o usuário informações organizadas sobre o cliente na cidade digitada",
+    techs: ["React", "TypeScript", "Bootstrap"],
+    homepage: "https://mikael-espinola.github.io/clima_App/",
+    image: "assets/images/dataImages/weather_app_layout.png",
+    description_EN:
+      "Weather was developed to increase proficiency in React, Typescript, and Bootstrap integration. Its function is to present organized information to the user about the weather in the entered city.",
   },
   {
     id: 796012684,
@@ -58,6 +46,18 @@ const Data = [
     image: "assets/images/dataImages/bmi_layout.jpg",
     description_EN:
       "This is a solution to the Body Mass Index developed with One Bit Code YT channel mentorship, which help me improve my coding skills in React Native.",
+  },
+  {
+    id: 784991749,
+    name: "to do list",
+    html_url: "https://github.com/mikael-espinola/todo-list",
+    homepage: "https://mikael-espinola.github.io/todo-list/",
+    description_EN:
+      "A short todo list built to increase my skills with state management with Redux.",
+    description_PT:
+      "Uma lista de afazeres curta construída para aumentar minhas habilidades no gerenciamento de estado com Redux.",
+    techs: ["TypeScript", "Styled-Components", "Redux"],
+    image: "assets/images/dataImages/todo_layout.png",
   },
   {
     id: 784424986,
@@ -73,7 +73,7 @@ const Data = [
   },
   {
     id: 607954116,
-    name: "flappy_bird",
+    name: "flappy bird",
     html_url: "https://github.com/mikael-espinola/flappy_bird",
     description_PT:
       "Jogo Flappy Bird construído através da integração de JavaScript, HTML e CSS, resultando em manipulação do DOM.",
@@ -86,7 +86,7 @@ const Data = [
 
   {
     id: 591188654,
-    name: "Projeto_Mario",
+    name: "projeto mario",
     html_url: "https://github.com/mikael-espinola/Projeto_Mario",
     description_PT:
       "Landing Page para o novo filme do Super Mario Bros. O projeto foi desenvolvido durante o Intensivo de Desenvolvimento Full Stack sob a orientação dos professores @devemdobro.",
