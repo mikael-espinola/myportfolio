@@ -25,23 +25,27 @@ function Footer() {
   return (
     <>
       <Container ref={contactsRef}>
-        <Text1>
-          {lang === "EN" ? "Thank you for visiting." : "Obrigado pela visita."}
-        </Text1>
-        <Text2>
-          {lang === "EN"
-            ? "Let's work together? Get in touch with me:"
-            : "Vamos trabalhar juntos? Entre em contato comigo:"}
-        </Text2>
+        {lang === "EN" ? (
+          <Text1>Thank you for visiting.</Text1>
+        ) : (
+          <Text1>Obrigado pela visita.</Text1>
+        )}
+        {lang === "EN" ? (
+          <Text2>Let's work together? Get in touch with me</Text2>
+        ) : (
+          <Text2>Vamos trabalhar juntos? Entre em contato comigo</Text2>
+        )}
         <ContactsContainer>
           <Contacts />
         </ContactsContainer>
         <CreditsContainer>
           <Rights>
-            © {year} Mikael Espínola.
-            {lang === "EN"
-              ? " All rights reserved."
-              : " Todos os direitos reservados."}
+            <span> © {year} Mikael Espínola.</span>
+            {lang === "EN" ? (
+              <span> All rights reserved.</span>
+            ) : (
+              <span> Todos os direitos reservados.</span>
+            )}
           </Rights>
         </CreditsContainer>
       </Container>

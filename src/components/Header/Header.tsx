@@ -10,8 +10,6 @@ function Header() {
 
   const handleNavigation = (key: string) => {
     const ref = refs[key] as MutableRefObject<HTMLElement | null> | null;
-    console.log(ref);
-    console.log(refs);
     if (ref && ref.current) {
       ref.current.scrollIntoView({ behavior: "smooth", block: "start" });
     }

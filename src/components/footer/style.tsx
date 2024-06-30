@@ -18,6 +18,7 @@ export const Text1 = styled.h1`
   margin: 1em 0;
 `;
 export const Text2 = styled.h4`
+  text-align: center;
   font-size: 14px;
   margin: 0.5em;
   @media screen and (min-width: 700px) {
@@ -25,7 +26,7 @@ export const Text2 = styled.h4`
   }
 `;
 export const ContactsContainer = styled.div`
-  width: 100%;
+  width: 95%;
   @media screen and (min-width: 700px) {
     width: 75%;
   }
@@ -35,4 +36,10 @@ export const CreditsContainer = styled.div`
 `;
 export const Rights = styled.strong`
   font-size: 12px;
+  display: grid;
+  place-items: center;
+
+  @media (min-width: 700px) {
+    display: inline;
+  }
 `;
