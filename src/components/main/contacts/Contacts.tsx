@@ -34,7 +34,7 @@ function Contacts() {
         </Item>
         <Item>
           <Link
-            target="_blank"
+            download={"CV_Mikael_Espinola"}
             href="https://drive.google.com/uc?export=download&id=1c_yaGantdaVfzAuoA0dsB8eu-qirXESY"
           >
             {<FaFileDownload color="gray" title="Résumé / CV" />}
