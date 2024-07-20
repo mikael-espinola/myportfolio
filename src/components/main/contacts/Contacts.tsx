@@ -6,7 +6,7 @@ import { FaLinkedin } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
 import { SiGmail } from "react-icons/si";
 import { FaWhatsapp } from "react-icons/fa";
-import { IoDocument } from "react-icons/io5";
+import { FaFileDownload } from "react-icons/fa";
 
 function Contacts() {
   return (
@@ -35,9 +35,9 @@ function Contacts() {
         <Item>
           <Link
             target="_blank"
-            href="https://drive.google.com/file/d/1PvINJ3d2KnvGCsueh61q0uyvFqsGaAj8/view?usp=sharing"
+            href="https://drive.google.com/uc?export=download&id=1c_yaGantdaVfzAuoA0dsB8eu-qirXESY"
           >
-            {<IoDocument color="gray" title="Résumé" />}
+            {<FaFileDownload color="gray" title="Résumé / CV" />}
           </Link>
         </Item>
       </List>
